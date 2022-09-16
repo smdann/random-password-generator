@@ -1,6 +1,8 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+// start here
+
 // Global Variables
 var numOfCharacters;
 var lowerCaseLtrs;
@@ -8,30 +10,56 @@ var upperCaseLtrs;
 var numbers;
 var specialCharacters;
 
+
+// Variables containing strings of password character types
+var onlyLowerCase = "abcdefghijklmnopqrstuvwxyz";
+var onlyUpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var onlyNumbers = "0123456789";
+var onlySpecial = "!@#$%&";
+var lowerUpper = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY";
+var lowerNumbers = "abcdefghijklmnopqrstuvwxyz0123456789";
+var lowerSpecial = "abcdefghijklmnopqrstuvwxyz!@#$%&";
+var lowerUpperNumbers = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY0123456789";
+var lowerUpperSpecial = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY!@#$%&";
+var upperNumbers = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+var upperSpecial = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%&";
+var upperNumbersSpecial = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&";
+var numbersSpecial = "0123456789!@#$%&";
+var lowerUpperNumbersSpecial = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY0123456789!@#$%&";
+
+
+
+
 // Ask the user how many characters should be in the password
 function howManyCharacters() {
-  numOfCharacters = parseInt (prompt("How many characters would you like your password to be?"));
+  numOfCharacters = parseInt(prompt("How many characters would you like your password to contain? (Must be between 8 and 128 characters)"));
+  console.log(numOfCharacters)
+  // If a number between 8 and 128 is entered by user, 
 }
 
 // Ask the user if they would like lowercase letters to be included
 function useLowerCaseLtrs() {
-  lowerCaseLtrs = (confirm ("Do you want lowercase letters in the password?"));
+  lowerCaseLtrs = (confirm ("Do you want to include lowercase characters?"));
 }
 
 // Ask the user if they would like uppercase letter to be included
 function useUpperCaseLtrs() {
-  upperCaseLtrs = (confirm ("Do you want uppercase letters in the password?"));
+  upperCaseLtrs = (confirm ("Do you want to include uppercase characters?"));
 }
 
 // Ask the user if they would like numbers to be included
 function useNumbers() {
-  numbers = (confirm ("Do you want numbers in the password?"));
+  numbers = (confirm ("Do you want to include numeric characters?"));
 }
 
 // Ask the user if they would like special characters to be included
 function useSpecialCharacters() {
-  specialCharacters = (confirm ("Do you want special characters in the password?"));
+  specialCharacters = (confirm ("Do you want to include special characters?"));
 }
+
+
+
+
 
 // Calls the functions
 function generatePassword() {
@@ -44,13 +72,25 @@ function generatePassword() {
 
 
 
+// end here
+
   return "finalpassword"
 }
 
 
+// var students = ["Fred", "Wilma", "Barney", "Betty"];
+//  var min =  ;
+//  var max =  ;
+//  var longStringOfStudents = "";
+//  var random = Math.floor(Math.random() * (max - min + 1) + min);
+//  longStringOfStudents += students[random];
+//  console.log(longStringOfStudents)
 
+// console.log(lowerCaseLtrs[3])
 
+// var joined = lowerCaseLtrs.concat(upperCaseLtrs);
 
+// console.log(joined)
 
 
 // Write password to the #password input
