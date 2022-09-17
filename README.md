@@ -27,6 +27,8 @@ After inputting an acceptable length and confirming the use of at least one char
 
 ![Random Password Generator](./assets/images/password-generator-screenshot.png)
 
+![Randomly Generated Password](./assets/images/generated-password.png)
+
 ## Credits
 
 N/A
