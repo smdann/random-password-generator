@@ -15,21 +15,18 @@ var passwordArray = [];
 
 
 // Variables containing strings of password character types
-var onlyLowerCase = "abcdefghijklmnopqrstuvwxyz";
-var arrOnlyLowerCase = onlyLowerCase.split("");
-console.log(arrOnlyLowerCase);
+var lowerCaseString = "abcdefghijklmnopqrstuvwxyz";
+var arrLowerCase = lowerCaseString.split("");
+console.log(arrLowerCase);
 
-var onlyUpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var arrOnlyUpperCase = onlyUpperCase.split("");
+var upperCaseString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var arrUpperCase = upperCaseString.split("");
 
-var onlyNumbers = "0123456789";
-var arrOnlyNumbers = onlyNumbers.split("");
+var numbersString = "0123456789";
+var arrNumbers = numbersString.split("");
 
-var onlySpecial = "!@#$%&";
-var arrOnlySpecial = onlySpecial.split("");
-
-var lowerUpperNumbersSpecial = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY0123456789!@#$%&";
-var arrLowerUpperNumbersSpecial = lowerUpperNumbersSpecial.split("");
+var specialString = "!@#$%&";
+var arrSpecial = specialString.split("");
 
 
 
@@ -76,6 +73,9 @@ function useSpecialCharacters() {
 
 // Conditional statement for generating appropriate password based on user's selections
 
+if (lowerCaseLtrs) {
+  passwordArray = passwordArray.concat(arrLowerCase)
+}
   // add loop for generating random number x amount of times that pulls from appropriate variable string
 
   
