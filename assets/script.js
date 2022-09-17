@@ -1,7 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Calls the function
+// Calls the function to generate a password
 function generatePassword() {
  
 // Global Variables
@@ -26,10 +26,10 @@ var arrNumbers = numbersString.split("");
 var specialString = "!@#$%&";
 var arrSpecial = specialString.split("");
 
-// Ask the user how many characters should be in the password
+// Asks the user how many characters should be in the password
 function getNumOfCharacters() {
   var userSelection = parseInt(prompt("How many characters would you like your password to contain? (Must be between 8 and 128 characters)"));
-  if (userSelection <8 || userSelection>128){
+  if (userSelection < 8 || userSelection > 128){
     window.alert("You must pick a number between 8 and 128.");
     getNumOfCharacters();
   }
@@ -37,27 +37,27 @@ function getNumOfCharacters() {
   return userSelection;
 }
 
-// Ask the user if they would like lowercase letters to be included
+// Asks the user to confirm including lowercase letters in the password
 function useLowerCaseLtrs() {
-  lowerCaseLtrs = (confirm ("Do you want to include lowercase characters?"));
+  lowerCaseLtrs = (confirm ("Click OK to confirm including lowercase characters."));
   console.log(lowerCaseLtrs);
 }
 
-// Ask the user if they would like uppercase letter to be included
+// Asks the user to confirm including uppercase letters in the password
 function useUpperCaseLtrs() {
-  upperCaseLtrs = (confirm ("Do you want to include uppercase characters?"));
+  upperCaseLtrs = (confirm ("Click OK to confirm including uppercase characters."));
   console.log(upperCaseLtrs);
 }
 
-// Ask the user if they would like numbers to be included
+// Asks the user to confirm including numbers in the password
 function useNumbers() {
-  numbers = (confirm ("Do you want to include numeric characters?"));
+  numbers = (confirm ("Click OK to confirm including numeric characters."));
   console.log(numbers)
 }
 
-// Ask the user if they would like special characters to be included
+// Asks the user to confirm including special characters in the password
 function useSpecialCharacters() {
-  specialCharacters = (confirm ("Do you want to include special characters?"));
+  specialCharacters = (confirm ("Click OK to confirm including special characters."));
   console.log(specialCharacters)
 }
 
@@ -67,6 +67,7 @@ function useSpecialCharacters() {
   useNumbers();
   useSpecialCharacters();
 
+// Alerts user if at least one character type is not selected, and then asks for character type selections again 
 if (!lowerCaseLtrs && !upperCaseLtrs && !numbers && !specialCharacters) {
   alert ("You must pick at least one character type.");
   useLowerCaseLtrs();
@@ -76,7 +77,6 @@ if (!lowerCaseLtrs && !upperCaseLtrs && !numbers && !specialCharacters) {
 }
   
 // Conditional statements for adding user's selections to passwordArray
-
 if (lowerCaseLtrs) {
   passwordArray = passwordArray.concat(arrLowerCase);
 }
@@ -90,7 +90,7 @@ if (specialCharacters) {
   passwordArray = passwordArray.concat(arrSpecial);
 }
   
-// Loop for generating a random number that pulls a random character from the passwordArray the number of times specified in the numOfCharacters variable, which get added to the passwordString
+// Loop for generating a random number that pulls a random character from the passwordArray - the number of times specified in the numOfCharacters variable - which get added to the passwordString
 
 var passwordString = "";
 
