@@ -71,12 +71,22 @@ function useSpecialCharacters() {
   
   
 
-// Conditional statement for generating appropriate password based on user's selections
+// Conditional statements for adding user's selections to passwordArray
 
 if (lowerCaseLtrs) {
-  passwordArray = passwordArray.concat(arrLowerCase)
+  passwordArray = passwordArray.concat(arrLowerCase);
 }
-  // add loop for generating random number x amount of times that pulls from appropriate variable string
+if (upperCaseLtrs) {
+  passwordArray = passwordArray.concat(arrUpperCase);
+}
+if (numbers) {
+  passwordArray = passwordArray.concat(arrNumbers);
+}
+if (specialCharacters) {
+  passwordArray = passwordArray.concat(arrSpecial);
+}
+  
+// add loop for generating random number x amount of times that pulls from appropriate variable string
 
   
     
