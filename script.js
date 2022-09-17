@@ -34,10 +34,12 @@ var arrLowerUpperNumbersSpecial = lowerUpperNumbersSpecial.split("");
 
 
 // Ask the user how many characters should be in the password
-function howManyCharacters() {
-  numOfCharacters = parseInt(prompt("How many characters would you like your password to contain? (Must be between 8 and 128 characters)"));
+function getNumOfCharacters() {
+  var userSelection = parseInt(prompt("How many characters would you like your password to contain? (Must be between 8 and 128 characters)"));
   console.log(numOfCharacters);
+  return userSelection;
 }
+
 
 // Ask the user if they would like lowercase letters to be included
 function useLowerCaseLtrs() {
@@ -64,7 +66,7 @@ function useSpecialCharacters() {
 }
 
 
-  howManyCharacters();
+  getNumOfCharacters();
   useLowerCaseLtrs();
   useUpperCaseLtrs();
   useNumbers();
