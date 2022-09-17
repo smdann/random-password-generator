@@ -63,7 +63,7 @@ function useSpecialCharacters() {
 }
 
 
-  getNumOfCharacters();
+  
   useLowerCaseLtrs();
   useUpperCaseLtrs();
   useNumbers();
@@ -86,16 +86,17 @@ if (specialCharacters) {
   passwordArray = passwordArray.concat(arrSpecial);
 }
   
-// add loop for generating random number x amount of times that pulls from appropriate variable string
+// Loop for generating a random number that pulls a random character from the passwordArray the number of times specified in the numOfCharacters variable, which get added to the passwordString
 
-  
+var passwordString = "";
+
+for (var i=0; i < numOfCharacters; i++) {
+  passwordString += passwordArray[Math.floor(Math.random() * (passwordArray.length))];
+}
     
 
-
-
-
 // End here
-  return "finalpassword"
+  return passwordString;
 
 }
 
