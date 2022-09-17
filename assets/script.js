@@ -15,7 +15,6 @@ var passwordArray = [];
 // Variables containing strings of password character types
 var lowerCaseString = "abcdefghijklmnopqrstuvwxyz";
 var arrLowerCase = lowerCaseString.split("");
-console.log(arrLowerCase);
 
 var upperCaseString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var arrUpperCase = upperCaseString.split("");
