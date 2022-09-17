@@ -39,25 +39,25 @@ function getNumOfCharacters() {
 
 // Asks the user to confirm including lowercase letters in the password
 function useLowerCaseLtrs() {
-  lowerCaseLtrs = (confirm ("Click OK to confirm including lowercase characters."));
+  lowerCaseLtrs = (confirm ("Click 'OK' to confirm including lowercase letters. Click 'Cancel' to proceed, but not include lowercase letters."));
   console.log(lowerCaseLtrs);
 }
 
 // Asks the user to confirm including uppercase letters in the password
 function useUpperCaseLtrs() {
-  upperCaseLtrs = (confirm ("Click OK to confirm including uppercase characters."));
+  upperCaseLtrs = (confirm ("Click 'OK' to confirm including uppercase letters. Click 'Cancel' to proceed, but not include uppercase letters."));
   console.log(upperCaseLtrs);
 }
 
 // Asks the user to confirm including numbers in the password
 function useNumbers() {
-  numbers = (confirm ("Click OK to confirm including numeric characters."));
+  numbers = (confirm ("Click OK to confirm including numbers. Click 'Cancel' to proceed, but not include numbers."));
   console.log(numbers)
 }
 
 // Asks the user to confirm including special characters in the password
 function useSpecialCharacters() {
-  specialCharacters = (confirm ("Click OK to confirm including special characters."));
+  specialCharacters = (confirm ("Click OK to confirm including special characters. Click 'Cancel' to proceed, but not include special characters."));
   console.log(specialCharacters)
 }
 
