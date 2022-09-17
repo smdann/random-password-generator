@@ -12,8 +12,6 @@ var numbers;
 var specialCharacters;
 var passwordArray = [];
 
-
-
 // Variables containing strings of password character types
 var lowerCaseString = "abcdefghijklmnopqrstuvwxyz";
 var arrLowerCase = lowerCaseString.split("");
@@ -28,15 +26,16 @@ var arrNumbers = numbersString.split("");
 var specialString = "!@#$%&";
 var arrSpecial = specialString.split("");
 
-
-
 // Ask the user how many characters should be in the password
 function getNumOfCharacters() {
   var userSelection = parseInt(prompt("How many characters would you like your password to contain? (Must be between 8 and 128 characters)"));
-  console.log(numOfCharacters);
+  if (userSelection <8 || userSelection>128){
+    window.alert("You must pick a number between 8 and 128.");
+    getNumOfCharacters();
+  }
+  console.log(userSelection);
   return userSelection;
 }
-
 
 // Ask the user if they would like lowercase letters to be included
 function useLowerCaseLtrs() {
@@ -62,15 +61,20 @@ function useSpecialCharacters() {
   console.log(specialCharacters)
 }
 
-
-  
+// Calls the functions to ask user which character types they want to include  
   useLowerCaseLtrs();
   useUpperCaseLtrs();
   useNumbers();
   useSpecialCharacters();
-  
-  
 
+if (!lowerCaseLtrs && !upperCaseLtrs && !numbers && !specialCharacters) {
+  alert ("You must pick at least one character type.");
+  useLowerCaseLtrs();
+  useUpperCaseLtrs();
+  useNumbers();
+  useSpecialCharacters();
+}
+  
 // Conditional statements for adding user's selections to passwordArray
 
 if (lowerCaseLtrs) {
@@ -94,14 +98,10 @@ for (var i=0; i < numOfCharacters; i++) {
   passwordString += passwordArray[Math.floor(Math.random() * (passwordArray.length))];
 }
     
-
 // End here
   return passwordString;
 
 }
-
-
-
 
 // Write password to the #password input
 function writePassword() {
